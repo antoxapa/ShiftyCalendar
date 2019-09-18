@@ -1,0 +1,393 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		064AFCB8232BCF8E00D3C3BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCB7232BCF8E00D3C3BE /* AppDelegate.swift */; };
+		064AFCBD232BCF8E00D3C3BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064AFCBB232BCF8E00D3C3BE /* Main.storyboard */; };
+		064AFCBF232BCF8F00D3C3BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064AFCBE232BCF8F00D3C3BE /* Assets.xcassets */; };
+		064AFCC2232BCF8F00D3C3BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064AFCC0232BCF8F00D3C3BE /* LaunchScreen.storyboard */; };
+		064AFCCD232BE67F00D3C3BE /* MonthCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCCC232BE67F00D3C3BE /* MonthCell.swift */; };
+		064AFCCF232BE6C300D3C3BE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCCE232BE6C300D3C3BE /* MainViewController.swift */; };
+		064AFCD1232BE92400D3C3BE /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCD0232BE92400D3C3BE /* DayCell.swift */; };
+		064AFCD3232C049B00D3C3BE /* DayMonthModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCD2232C049B00D3C3BE /* DayMonthModels.swift */; };
+		064AFCD5232C084700D3C3BE /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCD4232C084700D3C3BE /* DateFunctions.swift */; };
+		064AFCD9232C339F00D3C3BE /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCD8232C339F00D3C3BE /* EmptyCell.swift */; };
+		064AFCDD232C556800D3C3BE /* MonthNameHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCDC232C556800D3C3BE /* MonthNameHeader.swift */; };
+		064AFCDF2332954200D3C3BE /* MonthNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCDE2332954200D3C3BE /* MonthNameCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		064AFCB4232BCF8E00D3C3BE /* ShiftyCalendar 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShiftyCalendar 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		064AFCB7232BCF8E00D3C3BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		064AFCBC232BCF8E00D3C3BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		064AFCBE232BCF8F00D3C3BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		064AFCC1232BCF8F00D3C3BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		064AFCC3232BCF8F00D3C3BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064AFCCC232BE67F00D3C3BE /* MonthCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthCell.swift; sourceTree = "<group>"; };
+		064AFCCE232BE6C300D3C3BE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		064AFCD0232BE92400D3C3BE /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		064AFCD2232C049B00D3C3BE /* DayMonthModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayMonthModels.swift; sourceTree = "<group>"; };
+		064AFCD4232C084700D3C3BE /* DateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFunctions.swift; sourceTree = "<group>"; };
+		064AFCD8232C339F00D3C3BE /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
+		064AFCDC232C556800D3C3BE /* MonthNameHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNameHeader.swift; sourceTree = "<group>"; };
+		064AFCDE2332954200D3C3BE /* MonthNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonthNameCell.swift; path = ../../../../.Trash/MonthNameCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		064AFCB1232BCF8E00D3C3BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		064AFCAB232BCF8E00D3C3BE = {
+			isa = PBXGroup;
+			children = (
+				064AFCB6232BCF8E00D3C3BE /* ShiftyCalendar 2.0 */,
+				064AFCB5232BCF8E00D3C3BE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		064AFCB5232BCF8E00D3C3BE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				064AFCB4232BCF8E00D3C3BE /* ShiftyCalendar 2.0.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		064AFCB6232BCF8E00D3C3BE /* ShiftyCalendar 2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				064AFCC3232BCF8F00D3C3BE /* Info.plist */,
+				064AFCCB232BE61900D3C3BE /* Model */,
+				064AFCCA232BE61400D3C3BE /* View */,
+				064AFCC9232BE60600D3C3BE /* Controller */,
+			);
+			path = "ShiftyCalendar 2.0";
+			sourceTree = "<group>";
+		};
+		064AFCC9232BE60600D3C3BE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				064AFCCE232BE6C300D3C3BE /* MainViewController.swift */,
+				064AFCCC232BE67F00D3C3BE /* MonthCell.swift */,
+				064AFCD0232BE92400D3C3BE /* DayCell.swift */,
+				064AFCD8232C339F00D3C3BE /* EmptyCell.swift */,
+				064AFCDC232C556800D3C3BE /* MonthNameHeader.swift */,
+				064AFCDE2332954200D3C3BE /* MonthNameCell.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		064AFCCA232BE61400D3C3BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				064AFCBB232BCF8E00D3C3BE /* Main.storyboard */,
+				064AFCC0232BCF8F00D3C3BE /* LaunchScreen.storyboard */,
+				064AFCBE232BCF8F00D3C3BE /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		064AFCCB232BE61900D3C3BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				064AFCB7232BCF8E00D3C3BE /* AppDelegate.swift */,
+				064AFCD2232C049B00D3C3BE /* DayMonthModels.swift */,
+				064AFCD4232C084700D3C3BE /* DateFunctions.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		064AFCB3232BCF8E00D3C3BE /* ShiftyCalendar 2.0 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 064AFCC6232BCF8F00D3C3BE /* Build configuration list for PBXNativeTarget "ShiftyCalendar 2.0" */;
+			buildPhases = (
+				064AFCB0232BCF8E00D3C3BE /* Sources */,
+				064AFCB1232BCF8E00D3C3BE /* Frameworks */,
+				064AFCB2232BCF8E00D3C3BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ShiftyCalendar 2.0";
+			productName = "ShiftyCalendar 2.0";
+			productReference = 064AFCB4232BCF8E00D3C3BE /* ShiftyCalendar 2.0.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		064AFCAC232BCF8E00D3C3BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "TonyPo Production";
+				TargetAttributes = {
+					064AFCB3232BCF8E00D3C3BE = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = 064AFCAF232BCF8E00D3C3BE /* Build configuration list for PBXProject "ShiftyCalendar 2.0" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 064AFCAB232BCF8E00D3C3BE;
+			productRefGroup = 064AFCB5232BCF8E00D3C3BE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				064AFCB3232BCF8E00D3C3BE /* ShiftyCalendar 2.0 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		064AFCB2232BCF8E00D3C3BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064AFCC2232BCF8F00D3C3BE /* LaunchScreen.storyboard in Resources */,
+				064AFCBF232BCF8F00D3C3BE /* Assets.xcassets in Resources */,
+				064AFCBD232BCF8E00D3C3BE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		064AFCB0232BCF8E00D3C3BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				064AFCCF232BE6C300D3C3BE /* MainViewController.swift in Sources */,
+				064AFCDD232C556800D3C3BE /* MonthNameHeader.swift in Sources */,
+				064AFCD5232C084700D3C3BE /* DateFunctions.swift in Sources */,
+				064AFCCD232BE67F00D3C3BE /* MonthCell.swift in Sources */,
+				064AFCDF2332954200D3C3BE /* MonthNameCell.swift in Sources */,
+				064AFCD9232C339F00D3C3BE /* EmptyCell.swift in Sources */,
+				064AFCD1232BE92400D3C3BE /* DayCell.swift in Sources */,
+				064AFCD3232C049B00D3C3BE /* DayMonthModels.swift in Sources */,
+				064AFCB8232BCF8E00D3C3BE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		064AFCBB232BCF8E00D3C3BE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				064AFCBC232BCF8E00D3C3BE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		064AFCC0232BCF8F00D3C3BE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				064AFCC1232BCF8F00D3C3BE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		064AFCC4232BCF8F00D3C3BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		064AFCC5232BCF8F00D3C3BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		064AFCC7232BCF8F00D3C3BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HUZSCYG3W;
+				INFOPLIST_FILE = "ShiftyCalendar 2.0/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TPP.ShiftyCalendar-2-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		064AFCC8232BCF8F00D3C3BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HUZSCYG3W;
+				INFOPLIST_FILE = "ShiftyCalendar 2.0/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "TPP.ShiftyCalendar-2-0";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		064AFCAF232BCF8E00D3C3BE /* Build configuration list for PBXProject "ShiftyCalendar 2.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064AFCC4232BCF8F00D3C3BE /* Debug */,
+				064AFCC5232BCF8F00D3C3BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		064AFCC6232BCF8F00D3C3BE /* Build configuration list for PBXNativeTarget "ShiftyCalendar 2.0" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				064AFCC7232BCF8F00D3C3BE /* Debug */,
+				064AFCC8232BCF8F00D3C3BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 064AFCAC232BCF8E00D3C3BE /* Project object */;
+}
