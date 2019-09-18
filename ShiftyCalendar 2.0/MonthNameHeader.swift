@@ -13,6 +13,10 @@ class MonthNameHeader: UICollectionReusableView {
     var skipCount: Int!
     var monthName: String!
     
+    @IBOutlet weak var monthNameCV: UICollectionView!
+    
+    let monthNameCellID = "monthNameCell"
+    let emptyCellID = "emptyCell"
 
     override func awakeFromNib() {
         super .awakeFromNib()
@@ -21,4 +25,20 @@ class MonthNameHeader: UICollectionReusableView {
         self.skipCount = skipCount
         self.monthName = monthName
     }
+}
+extension MonthNameHeader: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return skipCount
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if skipCount > indexPath.row {
+            return collectionView.dequeueReusableCell(withReuseIdentifier: emptyCellID, for: indexPath)
+        }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: monthNameCellID, for: indexPath) as? MonthNameCell else { return UICollectionViewCell() }
+        cell.configure
+        return cell
+    }
+    
+    
 }
