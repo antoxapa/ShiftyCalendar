@@ -54,6 +54,7 @@ class MainViewController: UIViewController {
             let skipCount = getSkipCount(weekDayNo, startDay: weekStartDay)
             skipCountArray.append(skipCount)
             startDate = calendar.date(byAdding: .month, value: 1, to: startDate)!
+//            print(month.monthName)
         }
         DispatchQueue.main.async { [weak self] in
             self?.monthCollectionView.reloadData()
@@ -78,7 +79,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: monthCellID, for: indexPath) as? MonthCell else { return UICollectionViewCell() }
-        cell.configureCell(model: monthModels[indexPath.item], skipCount: skipCountArray[indexPath.row])
+//        cell.configureCell(model: monthModels[indexPath.item], skipCount: skipCountArray[indexPath.row])
         
         
         return cell

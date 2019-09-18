@@ -161,7 +161,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
-                                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d0Z-ED-LLI">
+                                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d0Z-ED-LLI">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="01t-8i-4q2">
@@ -191,14 +191,9 @@
                                                                             <constraint firstAttribute="trailing" secondItem="Nb7-e2-CcJ" secondAttribute="trailing" id="JHS-Yo-hhj"/>
                                                                             <constraint firstItem="Nb7-e2-CcJ" firstAttribute="leading" secondItem="9r4-bc-6PZ" secondAttribute="leading" id="Ss2-pb-kVz"/>
                                                                         </constraints>
-                                                                    </collectionViewCell>
-                                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="emptyCell" id="OGf-ms-DiV" customClass="EmptyCell" customModule="ShiftyCalendar_2_0" customModuleProvider="target">
-                                                                        <rect key="frame" x="60.5" y="0.0" width="50" height="50"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                                                            <autoresizingMask key="autoresizingMask"/>
-                                                                        </view>
+                                                                        <connections>
+                                                                            <outlet property="MonthNameLabel" destination="Nb7-e2-CcJ" id="uoP-np-9VM"/>
+                                                                        </connections>
                                                                     </collectionViewCell>
                                                                 </cells>
                                                             </collectionView>

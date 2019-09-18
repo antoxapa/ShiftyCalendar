@@ -60,7 +60,7 @@ extension MonthCell: UICollectionViewDataSource, UICollectionViewDelegate {
         if indexPath.row < skipCount {
             return collectionView.dequeueReusableCell(withReuseIdentifier: emptyCellID, for: indexPath)
         }
-        
+        print(monthModel?.monthName)
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: dayCellID, for: indexPath) as? DayCell else { return UICollectionViewCell() }
         if let model = self.monthModel {
         cell.configureCell(model: (model.days[indexPath.item - skipCount]))
@@ -77,7 +77,7 @@ extension MonthCell: UICollectionViewDataSource, UICollectionViewDelegate {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerID, for: indexPath) as? MonthNameHeader else { return UICollectionReusableView() }
-            headerView.configureHederCell(skipCount: skipCount, monthName: monthModel!.monthName)
+//            headerView.configureHederCell(skipCount: skipCount, monthName: monthModel!.monthName)
             return headerView
         default:
             return UICollectionReusableView()
