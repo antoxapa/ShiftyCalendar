@@ -14,16 +14,5 @@ class DayCell: UICollectionViewCell {
     @IBOutlet weak var iventView: UIView!
     @IBOutlet weak var dayCellSubView: UIView!
     
-    var monthModel: CalendarDay?
-    
-    
-    func configureCell(model: CalendarDay) {
-        self.monthModel = model
-        if let day = model.day {
-            dayLabel.text = String(describing: day)
-            dayCellSubView.backgroundColor = .lightGray
-            
-            dayCellSubView.alpha = 0.2
-        }
-    }
+ 
 }

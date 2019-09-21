@@ -13,15 +13,22 @@ class CalendarMonth {
     var monthNumber: Int!
     var year: Int!
     var days: [CalendarDay] = [CalendarDay]()
+    var skipCount: Int!
     
     init(year: Int, monthNumber: Int, monthName: String) {
         self.year = year
         self.monthNumber = monthNumber
         self.monthName = monthName
+        
+        let weekDay = getDayOfWeek(year: year, month: monthNumber)
+        let skipCount = getSkipCount(weekDay, startDay: .monday)
+        self.skipCount = skipCount
+        
         let totalDaysInMonth = getNumberOfDaysInMonth(year: year, month: monthNumber)
         self.days = createDaysArray(from: totalDaysInMonth, month: monthNumber, year: year)
         
     }
+    
     
     func createDaysArray(from days: Int, month: Int, year: Int) -> [CalendarDay] {
         var dayArray = [CalendarDay]()

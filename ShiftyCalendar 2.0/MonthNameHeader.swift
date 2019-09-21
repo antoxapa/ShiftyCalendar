@@ -9,44 +9,26 @@
 import UIKit
 
 class MonthNameHeader: UICollectionReusableView {
-    
-    var skipCount: Int!
-    var monthName: String!
-    
+
     @IBOutlet weak var monthNameCV: UICollectionView!
     
     let monthNameCellID = "monthNameCell"
     let emptyCellID = "emptyCell"
-    
-
-    override func awakeFromNib() {
-        super .awakeFromNib()
-        monthNameCV.delegate = self
-        monthNameCV.dataSource = self
-    }
-    func configureHederCell(skipCount: Int, monthName: String) {
-        self.skipCount = skipCount
-        self.monthName = monthName
-    }
 }
-extension MonthNameHeader: UICollectionViewDelegate, UICollectionViewDataSource {
+
+extension MonthNameHeader: UICollectionViewDelegate {
+    
+}
+
+extension MonthNameHeader: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 7
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: monthNameCellID, for: indexPath) as? MonthNameCell else { return UICollectionViewCell() }
-//        cell.MonthNameLabel.text = monthName
-//        if indexPath.row < skipCount {
-//
-//        cell.isHidden = true
-//
-//        } else {
-//            if indexPath.row > skipCount {
-//                cell.isHidden = true
-//            }
-//        }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: monthNameCellID, for: indexPath) as? MonthNameCell else {
+            return UICollectionViewCell()
+        }
         return cell
     }
     
