@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
     let monthCellID = "monthCell"
     
     // MARK:- Variables
-    var monthModels: [CalendarMonth] = [CalendarMonth]()
+    var monthModels = [CalendarMonth]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +43,7 @@ class MainViewController: UIViewController {
             let month = startDate.getMonth()
             monthModels.append(CalendarMonth(year: month.year, monthNumber: month.month, monthName: month.name))
             startDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
+            
             
         }
     }
@@ -68,6 +69,7 @@ extension MainViewController {
 
 extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return monthModels.count
     }
@@ -76,6 +78,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             return UICollectionViewCell()
         }
         cell.configureCell(model: monthModels[indexPath.item])
+        
         return cell
     }
 }

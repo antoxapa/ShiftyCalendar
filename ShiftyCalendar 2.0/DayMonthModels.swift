@@ -14,6 +14,7 @@ class CalendarMonth {
     var year: Int!
     var days: [CalendarDay] = [CalendarDay]()
     var skipCount: Int!
+
     
     init(year: Int, monthNumber: Int, monthName: String) {
         self.year = year

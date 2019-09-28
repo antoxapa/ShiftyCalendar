@@ -14,5 +14,12 @@ class DayCell: UICollectionViewCell {
     @IBOutlet weak var iventView: UIView!
     @IBOutlet weak var dayCellSubView: UIView!
     
- 
+    
+    func configureDayCell(model: CalendarDay) {
+        if let day = model.day {
+        dayLabel.text = String(describing: day)
+            iventView.backgroundColor = .white
+        }
+        dayCellSubView.alpha = 0.2
+    }
 }
