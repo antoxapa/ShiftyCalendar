@@ -35,7 +35,6 @@ class MainViewController: UIViewController {
         createDataBase()
     }
     
-    
     private func createDataBase() {
         var startDate = Today.todayDate
         let endDate = startDate.getDateAfter(year: 1, month: 0)
@@ -78,6 +77,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             return UICollectionViewCell()
         }
         cell.configureCell(model: monthModels[indexPath.item])
+        
         
         return cell
     }

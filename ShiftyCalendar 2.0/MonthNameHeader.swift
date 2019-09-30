@@ -16,10 +16,15 @@ class MonthNameHeader: UICollectionReusableView {
     let emptyCellID = "emptyCell"
     
     var monthModel: CalendarMonth!
+    var daysModel: CalendarDay!
+    var currentYear: Int!
+    var currentMonth: Int!
     
     
     func configureHeader(model: CalendarMonth) {
         self.monthModel = model
+        currentYear = model.year
+        currentMonth = model.monthNumber
         DispatchQueue.main.async {
             self.monthNameCV.reloadData()
         }
@@ -37,6 +42,10 @@ extension MonthNameHeader: UICollectionViewDataSource, UICollectionViewDelegate 
         cell.MonthNameLabel.text = ""
         if monthModel.skipCount == indexPath.row {
             cell.MonthNameLabel.text = monthModel.monthName
+            if Today.todayDate.getMonth().month == currentMonth {
+                cell.MonthNameLabel.textColor = .red
+            }
+            
         }
         return cell
     }
@@ -53,5 +62,11 @@ extension MonthNameHeader: UICollectionViewDelegateFlowLayout {
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+extension MonthNameHeader {
+    fileprivate func getDate(model: CalendarDay) -> Date? {
+        return getDateFrom(year: currentYear, month: currentMonth, day: model.day)
     }
 }

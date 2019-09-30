@@ -41,7 +41,7 @@ class CalendarMonth {
 }
 
 class CalendarDay {
-    var day: Int?
+    var day: Int!
     init(day: Int) {
         self.day = day
     }

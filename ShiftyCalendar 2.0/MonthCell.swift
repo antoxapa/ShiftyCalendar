@@ -60,7 +60,33 @@ extension MonthCell: UICollectionViewDataSource, UICollectionViewDelegate, UICol
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: dayCellID, for: indexPath) as? DayCell else {
             return UICollectionViewCell()
         }
+        cell.currentMonth = currentMonth
+        cell.currentYear = currentYear
         cell.configureDayCell(model: monthModel.days[indexPath.row - skipCount])
+        
+        for i in indexPath {
+            if i == 5 {
+                cell.dayLabel.textColor = .gray
+            } else if i == 6 {
+                cell.dayLabel.textColor = .gray
+            } else if i == 12 {
+                cell.dayLabel.textColor = .gray
+            } else if i == 13 {
+                cell.dayLabel.textColor = .gray
+            } else if i == 19 {
+                cell.dayLabel.textColor = .gray
+            } else if i == 20 {
+                cell.dayLabel.textColor = .gray
+            } else if i == 26 {
+                cell.dayLabel.textColor = .gray
+            } else if i == 27 {
+                cell.dayLabel.textColor = .gray
+            } else if i == 33 {
+                cell.dayLabel.textColor = .gray
+            } else if i == 34 {
+                cell.dayLabel.textColor = .gray
+            }
+        }
         return cell
     }
     
