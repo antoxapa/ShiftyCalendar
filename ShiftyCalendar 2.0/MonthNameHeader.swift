@@ -39,11 +39,11 @@ extension MonthNameHeader: UICollectionViewDataSource, UICollectionViewDelegate 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: monthNameCellID, for: indexPath) as? MonthNameCell else { return UICollectionViewCell() }
-        cell.MonthNameLabel.text = ""
+        cell.monthNameLabel.text = ""
         if monthModel.skipCount == indexPath.row {
-            cell.MonthNameLabel.text = monthModel.monthName
+            cell.monthNameLabel.text = monthModel.monthName
             if Today.todayDate.getMonth().month == currentMonth {
-                cell.MonthNameLabel.textColor = .red
+                cell.monthNameLabel.textColor = .red
             }
             
         }

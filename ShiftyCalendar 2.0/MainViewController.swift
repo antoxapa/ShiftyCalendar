@@ -28,12 +28,34 @@ class MainViewController: UIViewController {
     
     // MARK:- Variables
     var monthModels = [CalendarMonth]()
+    private var eventDay: Date?
+    private var eventColor: UIColor?
+    private var eventName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.setValue(true, forKey: "hidesShadow")
         createDataBase()
     }
+    
+    // MARK:- Action
+    @IBAction func unwindToMainViewController(segue: UIStoryboardSegue) {
+        guard let svc = segue.source as? Event else { return }
+        if segue.identifier == "cancel" {
+         print("Cancelled")
+        } else {
+            if  segue.identifier == "done" {
+                self.eventDay = svc.startDate
+                self.eventName = svc.setName
+                self.eventColor = svc.setColor
+                print("data uploaded")
+                DispatchQueue.main.async {
+                    self.monthCollectionView.reloadData()
+                }
+            }
+        }
+    }
+    
     
     private func createDataBase() {
         var startDate = Today.todayDate
@@ -77,8 +99,10 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
             return UICollectionViewCell()
         }
         cell.configureCell(model: monthModels[indexPath.item])
-        
-        
+        if eventName != nil {
+        cell.setEvent(eventName: eventName!, eventColor: eventColor!, firstEventDay: eventDay!)
+        }
+    
         return cell
     }
 }

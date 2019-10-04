@@ -126,6 +126,14 @@ extension Date {
         return (year, month, monthName)
     }
     
+    func getEventInfo() -> (year: Int, month: Int, day: Int) {
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: self)
+        let month = calendar.component(.month, from: self)
+        let day = calendar.component(.day, from: self)
+        return (year, month, day)
+    }
+    
 //    func getWeekend(year: Int, month: Int, day: Int) {
 //        let calendar = Calendar.current
 //        let currentWeekDay = getDateFrom(year: year, month: month, day: day)

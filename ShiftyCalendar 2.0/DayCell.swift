@@ -18,11 +18,23 @@ class DayCell: UICollectionViewCell {
             dayCellSubView.alpha = 0.3
         }
     }
-    @IBOutlet weak var cellBGView: UIView! 
+    @IBOutlet weak var cellBGView: UIView!
+    
+    @IBOutlet weak var eventView: UIView! {
+        didSet {
+            eventView.layer.cornerRadius = eventView.frame.width / 2
+            eventView.isHidden = true
+        }
+    }
     
     var currentYear: Int!
     var currentMonth: Int!
     var daysModel: CalendarDay!
+    
+    var eventName = ""
+    var eventColor = UIColor.gray
+    var firstEventDay: Date!
+    
     
     
     override func awakeFromNib() {
@@ -49,6 +61,29 @@ class DayCell: UICollectionViewCell {
         if let day = model.day {
         dayLabel.text = String(describing: day)
         setUpToday(model: daysModel)
+        }
+    }
+    
+    func setEventFirstDay(eventName: String, eventColor: UIColor, firstEventDay: Date) {
+        self.eventColor = eventColor
+        print(eventColor)
+        self.eventName = eventName
+        self.firstEventDay = firstEventDay
+        setEvent()
+        
+    }
+    func setEvent() {
+        let eventInfo = firstEventDay.getEventInfo()
+        let eventYear = eventInfo.year
+        let eventMonth = eventInfo.month
+        let eventDay = eventInfo.day
+        if eventYear == currentYear {
+            if eventMonth == currentMonth {
+                if eventDay == daysModel.day {
+                    eventView.isHidden = false
+                    eventView.backgroundColor = eventColor
+                }
+            }
         }
     }
 }

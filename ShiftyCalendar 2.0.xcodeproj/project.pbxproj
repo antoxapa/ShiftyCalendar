@@ -18,7 +18,8 @@
 		064AFCD5232C084700D3C3BE /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCD4232C084700D3C3BE /* DateFunctions.swift */; };
 		064AFCD9232C339F00D3C3BE /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCD8232C339F00D3C3BE /* EmptyCell.swift */; };
 		064AFCDD232C556800D3C3BE /* MonthNameHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCDC232C556800D3C3BE /* MonthNameHeader.swift */; };
-		064AFCDF2332954200D3C3BE /* MonthNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCDE2332954200D3C3BE /* MonthNameCell.swift */; };
+		0670074323464E8E00452EAF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670074223464E8E00452EAF /* Event.swift */; };
+		06B3BE8D23461F800058CD90 /* MonthNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B3BE8C23461F800058CD90 /* MonthNameCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +36,8 @@
 		064AFCD4232C084700D3C3BE /* DateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFunctions.swift; sourceTree = "<group>"; };
 		064AFCD8232C339F00D3C3BE /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
 		064AFCDC232C556800D3C3BE /* MonthNameHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNameHeader.swift; sourceTree = "<group>"; };
-		064AFCDE2332954200D3C3BE /* MonthNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MonthNameCell.swift; path = ../../../../.Trash/MonthNameCell.swift; sourceTree = "<group>"; };
+		0670074223464E8E00452EAF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		06B3BE8C23461F800058CD90 /* MonthNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNameCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,11 +82,12 @@
 			isa = PBXGroup;
 			children = (
 				064AFCCE232BE6C300D3C3BE /* MainViewController.swift */,
+				0670074223464E8E00452EAF /* Event.swift */,
 				064AFCCC232BE67F00D3C3BE /* MonthCell.swift */,
 				064AFCD0232BE92400D3C3BE /* DayCell.swift */,
 				064AFCD8232C339F00D3C3BE /* EmptyCell.swift */,
 				064AFCDC232C556800D3C3BE /* MonthNameHeader.swift */,
-				064AFCDE2332954200D3C3BE /* MonthNameCell.swift */,
+				06B3BE8C23461F800058CD90 /* MonthNameCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -184,7 +187,8 @@
 				064AFCDD232C556800D3C3BE /* MonthNameHeader.swift in Sources */,
 				064AFCD5232C084700D3C3BE /* DateFunctions.swift in Sources */,
 				064AFCCD232BE67F00D3C3BE /* MonthCell.swift in Sources */,
-				064AFCDF2332954200D3C3BE /* MonthNameCell.swift in Sources */,
+				0670074323464E8E00452EAF /* Event.swift in Sources */,
+				06B3BE8D23461F800058CD90 /* MonthNameCell.swift in Sources */,
 				064AFCD9232C339F00D3C3BE /* EmptyCell.swift in Sources */,
 				064AFCD1232BE92400D3C3BE /* DayCell.swift in Sources */,
 				064AFCD3232C049B00D3C3BE /* DayMonthModels.swift in Sources */,

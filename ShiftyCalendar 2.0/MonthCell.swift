@@ -26,6 +26,10 @@ class MonthCell: UICollectionViewCell {
     var currentMonthName = "January"
     var skipCount = 0
     
+    // MARK:- Event info
+    var eventName: String?
+    var eventColor = UIColor.gray
+    var firstEventDay: Date!
     
     override class func awakeFromNib() {
         super.awakeFromNib()
@@ -42,6 +46,14 @@ class MonthCell: UICollectionViewCell {
         }
     }
     
+    func setEvent(eventName: String, eventColor: UIColor, firstEventDay: Date) {
+        self.eventName = eventName
+        self.eventColor = eventColor
+        self.firstEventDay = firstEventDay
+        DispatchQueue.main.async {
+            self.daysCollectionView.reloadData()
+        }
+    }
     
 }
 
@@ -63,6 +75,9 @@ extension MonthCell: UICollectionViewDataSource, UICollectionViewDelegate, UICol
         cell.currentMonth = currentMonth
         cell.currentYear = currentYear
         cell.configureDayCell(model: monthModel.days[indexPath.row - skipCount])
+        if eventName != nil {
+               cell.setEventFirstDay(eventName: eventName!, eventColor: eventColor, firstEventDay: firstEventDay)
+        }
         
         for i in indexPath {
             if i == 5 {
