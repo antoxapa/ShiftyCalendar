@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060E91BF2349ED09003E9F72 /* DaysEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060E91BE2349ED09003E9F72 /* DaysEventsViewController.swift */; };
 		060EBC062348C5F900FFD642 /* PlistRealization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060EBC052348C5F900FFD642 /* PlistRealization.swift */; };
 		064AFCB8232BCF8E00D3C3BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCB7232BCF8E00D3C3BE /* AppDelegate.swift */; };
 		064AFCBD232BCF8E00D3C3BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064AFCBB232BCF8E00D3C3BE /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		060E91BE2349ED09003E9F72 /* DaysEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysEventsViewController.swift; sourceTree = "<group>"; };
 		060EBC052348C5F900FFD642 /* PlistRealization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistRealization.swift; sourceTree = "<group>"; };
 		064AFCB4232BCF8E00D3C3BE /* ShiftyCalendar 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShiftyCalendar 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		064AFCB7232BCF8E00D3C3BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		064AFCB6232BCF8E00D3C3BE /* ShiftyCalendar 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				064AFCB7232BCF8E00D3C3BE /* AppDelegate.swift */,
 				064AFCC3232BCF8F00D3C3BE /* Info.plist */,
 				0663EC36234888DB00DBB001 /* Event.plist */,
 				064AFCCB232BE61900D3C3BE /* Model */,
@@ -87,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				064AFCCE232BE6C300D3C3BE /* MainViewController.swift */,
+				060E91BE2349ED09003E9F72 /* DaysEventsViewController.swift */,
 				0670074223464E8E00452EAF /* Event.swift */,
 				064AFCCC232BE67F00D3C3BE /* MonthCell.swift */,
 				064AFCD0232BE92400D3C3BE /* DayCell.swift */,
@@ -110,7 +114,6 @@
 		064AFCCB232BE61900D3C3BE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				064AFCB7232BCF8E00D3C3BE /* AppDelegate.swift */,
 				064AFCD2232C049B00D3C3BE /* DayMonthModels.swift */,
 				064AFCD4232C084700D3C3BE /* DateFunctions.swift */,
 				060EBC052348C5F900FFD642 /* PlistRealization.swift */,
@@ -192,6 +195,7 @@
 			files = (
 				060EBC062348C5F900FFD642 /* PlistRealization.swift in Sources */,
 				064AFCCF232BE6C300D3C3BE /* MainViewController.swift in Sources */,
+				060E91BF2349ED09003E9F72 /* DaysEventsViewController.swift in Sources */,
 				064AFCDD232C556800D3C3BE /* MonthNameHeader.swift in Sources */,
 				064AFCD5232C084700D3C3BE /* DateFunctions.swift in Sources */,
 				064AFCCD232BE67F00D3C3BE /* MonthCell.swift in Sources */,

@@ -41,6 +41,11 @@ class DayCell: UICollectionViewCell {
         super.awakeFromNib()
         
     }
+    override func prepareForReuse() {
+           eventView.isHidden = true
+           eventView.backgroundColor = .clear
+           
+       }
     
     func setUpToday(model: CalendarDay) {
         if Today.todayDate.isSame(getDate(model: model)) {
@@ -77,11 +82,6 @@ class DayCell: UICollectionViewCell {
                 }
             }
         }
-    }
-    override func prepareForReuse() {
-        eventView.isHidden = true
-        eventView.backgroundColor = .clear
-        
     }
 }
 

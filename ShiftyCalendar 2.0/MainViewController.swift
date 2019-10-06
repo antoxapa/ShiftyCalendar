@@ -61,12 +61,12 @@ class MainViewController: UIViewController {
                     } catch {
                         print("error")
                     }
+                    self.getPlist()
                     self.monthCollectionView.reloadData()
                 }
             }
         }
     }
-    
     
     private func createDataBase() {
         var startDate = Today.todayDate
