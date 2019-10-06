@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class DayCell: UICollectionViewCell {
     
@@ -19,7 +20,6 @@ class DayCell: UICollectionViewCell {
         }
     }
     @IBOutlet weak var cellBGView: UIView!
-    
     @IBOutlet weak var eventView: UIView! {
         didSet {
             eventView.layer.cornerRadius = eventView.frame.width / 2
@@ -31,10 +31,10 @@ class DayCell: UICollectionViewCell {
     var currentMonth: Int!
     var daysModel: CalendarDay!
     
-    var eventName = ""
-    var eventColor = UIColor.gray
-    var firstEventDay: Date!
-    
+//    var eventName: String?
+//    var eventColor: UIColor?
+//    var firstEventDay: Date?
+//
     
     
     override func awakeFromNib() {
@@ -64,15 +64,7 @@ class DayCell: UICollectionViewCell {
         }
     }
     
-    func setEventFirstDay(eventName: String, eventColor: UIColor, firstEventDay: Date) {
-        self.eventColor = eventColor
-        print(eventColor)
-        self.eventName = eventName
-        self.firstEventDay = firstEventDay
-        setEvent()
-        
-    }
-    func setEvent() {
+    func configureEvent(eventName: String, eventColor: UIColor, firstEventDay: Date) {
         let eventInfo = firstEventDay.getEventInfo()
         let eventYear = eventInfo.year
         let eventMonth = eventInfo.month
@@ -86,6 +78,11 @@ class DayCell: UICollectionViewCell {
             }
         }
     }
+    override func prepareForReuse() {
+        eventView.isHidden = true
+        eventView.backgroundColor = .clear
+        
+    }
 }
 
 extension DayCell {
@@ -93,3 +90,4 @@ extension DayCell {
         return getDateFrom(year: currentYear, month: currentMonth, day: model.day)
     }
 }
+

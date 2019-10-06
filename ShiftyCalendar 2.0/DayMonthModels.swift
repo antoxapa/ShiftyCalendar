@@ -21,7 +21,7 @@ class CalendarMonth {
         self.monthNumber = monthNumber
         self.monthName = monthName
         
-        let weekDay = getDayOfWeek(year: year, month: monthNumber)
+        let weekDay = getMonthWeekDay(year: year, month: monthNumber)
         let skipCount = getSkipCount(weekDay, startDay: .monday)
         self.skipCount = skipCount
         

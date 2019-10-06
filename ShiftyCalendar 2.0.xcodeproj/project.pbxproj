@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		060EBC062348C5F900FFD642 /* PlistRealization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 060EBC052348C5F900FFD642 /* PlistRealization.swift */; };
 		064AFCB8232BCF8E00D3C3BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCB7232BCF8E00D3C3BE /* AppDelegate.swift */; };
 		064AFCBD232BCF8E00D3C3BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 064AFCBB232BCF8E00D3C3BE /* Main.storyboard */; };
 		064AFCBF232BCF8F00D3C3BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 064AFCBE232BCF8F00D3C3BE /* Assets.xcassets */; };
@@ -18,11 +19,13 @@
 		064AFCD5232C084700D3C3BE /* DateFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCD4232C084700D3C3BE /* DateFunctions.swift */; };
 		064AFCD9232C339F00D3C3BE /* EmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCD8232C339F00D3C3BE /* EmptyCell.swift */; };
 		064AFCDD232C556800D3C3BE /* MonthNameHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCDC232C556800D3C3BE /* MonthNameHeader.swift */; };
+		0663EC37234888DB00DBB001 /* Event.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0663EC36234888DB00DBB001 /* Event.plist */; };
 		0670074323464E8E00452EAF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670074223464E8E00452EAF /* Event.swift */; };
 		06B3BE8D23461F800058CD90 /* MonthNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B3BE8C23461F800058CD90 /* MonthNameCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		060EBC052348C5F900FFD642 /* PlistRealization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistRealization.swift; sourceTree = "<group>"; };
 		064AFCB4232BCF8E00D3C3BE /* ShiftyCalendar 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShiftyCalendar 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		064AFCB7232BCF8E00D3C3BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		064AFCBC232BCF8E00D3C3BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		064AFCD4232C084700D3C3BE /* DateFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFunctions.swift; sourceTree = "<group>"; };
 		064AFCD8232C339F00D3C3BE /* EmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyCell.swift; sourceTree = "<group>"; };
 		064AFCDC232C556800D3C3BE /* MonthNameHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNameHeader.swift; sourceTree = "<group>"; };
+		0663EC36234888DB00DBB001 /* Event.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Event.plist; sourceTree = "<group>"; };
 		0670074223464E8E00452EAF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		06B3BE8C23461F800058CD90 /* MonthNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNameCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				064AFCC3232BCF8F00D3C3BE /* Info.plist */,
+				0663EC36234888DB00DBB001 /* Event.plist */,
 				064AFCCB232BE61900D3C3BE /* Model */,
 				064AFCCA232BE61400D3C3BE /* View */,
 				064AFCC9232BE60600D3C3BE /* Controller */,
@@ -108,6 +113,7 @@
 				064AFCB7232BCF8E00D3C3BE /* AppDelegate.swift */,
 				064AFCD2232C049B00D3C3BE /* DayMonthModels.swift */,
 				064AFCD4232C084700D3C3BE /* DateFunctions.swift */,
+				060EBC052348C5F900FFD642 /* PlistRealization.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -173,6 +179,7 @@
 				064AFCC2232BCF8F00D3C3BE /* LaunchScreen.storyboard in Resources */,
 				064AFCBF232BCF8F00D3C3BE /* Assets.xcassets in Resources */,
 				064AFCBD232BCF8E00D3C3BE /* Main.storyboard in Resources */,
+				0663EC37234888DB00DBB001 /* Event.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				060EBC062348C5F900FFD642 /* PlistRealization.swift in Sources */,
 				064AFCCF232BE6C300D3C3BE /* MainViewController.swift in Sources */,
 				064AFCDD232C556800D3C3BE /* MonthNameHeader.swift in Sources */,
 				064AFCD5232C084700D3C3BE /* DateFunctions.swift in Sources */,

@@ -44,7 +44,7 @@ public enum WeekStartDay {
     case sunday
 }
 
-public func getDayOfWeek(year: Int, month: Int) -> Int {
+public func getMonthWeekDay(year: Int, month: Int) -> Int {
     let dateComponents = DateComponents(year: year, month: month)
     let calendar = Calendar.current
     if let date = calendar.date(from: dateComponents) {

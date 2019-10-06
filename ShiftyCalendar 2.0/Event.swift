@@ -64,7 +64,6 @@ class Event: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTF.becomeFirstResponder()
-        
     }
     
    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -73,10 +72,6 @@ class Event: UIViewController {
     
     @IBAction func setStartDate(_ sender: UIDatePicker) {
         startDate = sender.date
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .full
-        let dateValue = dateFormatter.string(from: sender.date)
-        print(dateValue)
     }
     
     @IBAction func colorButtonPressed(_ sender: UIButton) {
