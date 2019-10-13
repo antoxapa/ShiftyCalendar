@@ -24,6 +24,7 @@
 		0670074323464E8E00452EAF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670074223464E8E00452EAF /* Event.swift */; };
 		0691333B235336AC0075C12B /* EventsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691333A235336AC0075C12B /* EventsListVC.swift */; };
 		0691333D2353386C0075C12B /* EventsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691333C2353386C0075C12B /* EventsListCell.swift */; };
+		06913343235374820075C12B /* RepeatTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06913342235374820075C12B /* RepeatTVC.swift */; };
 		06B3BE8D23461F800058CD90 /* MonthNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B3BE8C23461F800058CD90 /* MonthNameCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		0670074223464E8E00452EAF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		0691333A235336AC0075C12B /* EventsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListVC.swift; sourceTree = "<group>"; };
 		0691333C2353386C0075C12B /* EventsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListCell.swift; sourceTree = "<group>"; };
+		06913342235374820075C12B /* RepeatTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTVC.swift; sourceTree = "<group>"; };
 		06B3BE8C23461F800058CD90 /* MonthNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNameCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				064AFCD8232C339F00D3C3BE /* EmptyCell.swift */,
 				064AFCDC232C556800D3C3BE /* MonthNameHeader.swift */,
 				06B3BE8C23461F800058CD90 /* MonthNameCell.swift */,
+				06913342235374820075C12B /* RepeatTVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				064AFCD1232BE92400D3C3BE /* DayCell.swift in Sources */,
 				064AFCD3232C049B00D3C3BE /* DayMonthModels.swift in Sources */,
 				064AFCB8232BCF8E00D3C3BE /* AppDelegate.swift in Sources */,
+				06913343235374820075C12B /* RepeatTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

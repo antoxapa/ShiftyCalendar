@@ -57,6 +57,11 @@ class Event: UIViewController {
         }
     }
     
+    @IBOutlet weak var repeatButton: UIButton!
+    
+    
+    
+    
     var startDate: Date?
     var setColor: UIColor?
     var setName: String?
@@ -83,6 +88,29 @@ class Event: UIViewController {
     }
     
     // MARK: - Navigation
+    
+    @IBAction func unwindToEventVC(segue: UIStoryboardSegue) {
+        guard let svc = segue.source as? RepeatTVC else { return }
+        switch segue.identifier {
+        case "everyday":
+            print("everyday")
+        case "twodays":
+             print("twodays")
+        case "everyweek":
+            print("everyweek")
+        case "everyMonth":
+            print("everyMonth")
+        case "never" :
+            print("never")
+        default:
+            print("default")
+        }
+    
+    
+    
+    
+    
+    
 }
 
-
+}
