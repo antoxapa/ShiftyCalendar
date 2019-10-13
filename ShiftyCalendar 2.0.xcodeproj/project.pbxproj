@@ -22,6 +22,8 @@
 		064AFCDD232C556800D3C3BE /* MonthNameHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064AFCDC232C556800D3C3BE /* MonthNameHeader.swift */; };
 		0663EC37234888DB00DBB001 /* Event.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0663EC36234888DB00DBB001 /* Event.plist */; };
 		0670074323464E8E00452EAF /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0670074223464E8E00452EAF /* Event.swift */; };
+		0691333B235336AC0075C12B /* EventsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691333A235336AC0075C12B /* EventsListVC.swift */; };
+		0691333D2353386C0075C12B /* EventsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691333C2353386C0075C12B /* EventsListCell.swift */; };
 		06B3BE8D23461F800058CD90 /* MonthNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B3BE8C23461F800058CD90 /* MonthNameCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		064AFCDC232C556800D3C3BE /* MonthNameHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNameHeader.swift; sourceTree = "<group>"; };
 		0663EC36234888DB00DBB001 /* Event.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Event.plist; sourceTree = "<group>"; };
 		0670074223464E8E00452EAF /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		0691333A235336AC0075C12B /* EventsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListVC.swift; sourceTree = "<group>"; };
+		0691333C2353386C0075C12B /* EventsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListCell.swift; sourceTree = "<group>"; };
 		06B3BE8C23461F800058CD90 /* MonthNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNameCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				064AFCCE232BE6C300D3C3BE /* MainViewController.swift */,
+				0691333A235336AC0075C12B /* EventsListVC.swift */,
+				0691333C2353386C0075C12B /* EventsListCell.swift */,
 				060E91BE2349ED09003E9F72 /* DaysEventsViewController.swift */,
 				0670074223464E8E00452EAF /* Event.swift */,
 				064AFCCC232BE67F00D3C3BE /* MonthCell.swift */,
@@ -197,9 +203,11 @@
 				064AFCCF232BE6C300D3C3BE /* MainViewController.swift in Sources */,
 				060E91BF2349ED09003E9F72 /* DaysEventsViewController.swift in Sources */,
 				064AFCDD232C556800D3C3BE /* MonthNameHeader.swift in Sources */,
+				0691333B235336AC0075C12B /* EventsListVC.swift in Sources */,
 				064AFCD5232C084700D3C3BE /* DateFunctions.swift in Sources */,
 				064AFCCD232BE67F00D3C3BE /* MonthCell.swift in Sources */,
 				0670074323464E8E00452EAF /* Event.swift in Sources */,
+				0691333D2353386C0075C12B /* EventsListCell.swift in Sources */,
 				06B3BE8D23461F800058CD90 /* MonthNameCell.swift in Sources */,
 				064AFCD9232C339F00D3C3BE /* EmptyCell.swift in Sources */,
 				064AFCD1232BE92400D3C3BE /* DayCell.swift in Sources */,
