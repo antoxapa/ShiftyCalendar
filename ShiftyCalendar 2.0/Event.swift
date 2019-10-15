@@ -65,6 +65,7 @@ class Event: UIViewController {
     var startDate: Date?
     var setColor: UIColor?
     var setName: String?
+    var repeating: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,14 +94,19 @@ class Event: UIViewController {
         guard let svc = segue.source as? RepeatTVC else { return }
         switch segue.identifier {
         case "everyday":
+            repeating = "everyday"
             print("everyday")
         case "twodays":
+            repeating = "twodays"
              print("twodays")
         case "everyweek":
+            repeating = "everyweek"
             print("everyweek")
         case "everyMonth":
+            repeating = "everyMonth"
             print("everyMonth")
         case "never" :
+            repeating = "never"
             print("never")
         default:
             print("default")

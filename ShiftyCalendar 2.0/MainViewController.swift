@@ -31,6 +31,7 @@ class MainViewController: UIViewController {
     private var firstEventDay: Date?
     private var eventColor: UIColor?
     private var eventName: String?
+    private var repeating: String?
     
     
     override func viewDidLoad() {
@@ -51,11 +52,12 @@ class MainViewController: UIViewController {
                 let eventDay = svc.startDate
                 let eventName = svc.setName
                 let eventColor = svc.setColor!.toHexString()
+                let repeating = svc.repeating
                 print("data uploaded")
                 
                 DispatchQueue.main.async {
                     do {
-                        let eventInfo: [String : Any] = ["eventDay": eventDay!, "eventName": eventName!, "eventColor": eventColor]
+                        let eventInfo: [String : Any] = ["eventDay": eventDay!, "eventName": eventName!, "eventColor": eventColor, "repeating": repeating!]
                         try savePropertyList(eventInfo)
                         print(eventInfo.values)
                     } catch {
@@ -90,6 +92,8 @@ class MainViewController: UIViewController {
             
             guard let color = eventInfo["eventColor"] as? String else { return }
             self.eventColor = UIColor(hexString: color)
+            guard let repeating = eventInfo["repeating"] as? String else { return }
+            self.repeating = repeating
         } catch {
             print("no data")
         }
@@ -127,7 +131,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
         }
         cell.configureCell(model: monthModels[indexPath.item])
         if firstEventDay != nil {
-            cell.configureEvent(eventName: eventName!, eventColor: eventColor!, firstEventDay: firstEventDay!)
+            cell.configureEvent(eventName: eventName!, eventColor: eventColor!, firstEventDay: firstEventDay!, repeating: repeating!)
         }
         return cell
     }

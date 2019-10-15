@@ -31,10 +31,10 @@ class DayCell: UICollectionViewCell {
     var currentMonth: Int!
     var daysModel: CalendarDay!
     
-//    var eventName: String?
-//    var eventColor: UIColor?
-//    var firstEventDay: Date?
-//
+    //    var eventName: String?
+    //    var eventColor: UIColor?
+    //    var firstEventDay: Date?
+    //
     
     
     override func awakeFromNib() {
@@ -42,10 +42,10 @@ class DayCell: UICollectionViewCell {
         
     }
     override func prepareForReuse() {
-           eventView.isHidden = true
-           eventView.backgroundColor = .clear
-           
-       }
+        eventView.isHidden = true
+        eventView.backgroundColor = .clear
+        
+    }
     
     func setUpToday(model: CalendarDay) {
         if Today.todayDate.isSame(getDate(model: model)) {
@@ -64,23 +64,61 @@ class DayCell: UICollectionViewCell {
     func configureDayCell(model: CalendarDay) {
         self.daysModel = model
         if let day = model.day {
-        dayLabel.text = String(describing: day)
-        setUpToday(model: daysModel)
+            dayLabel.text = String(describing: day)
+            setUpToday(model: daysModel)
         }
     }
     
-    func configureEvent(eventName: String, eventColor: UIColor, firstEventDay: Date) {
-        let eventInfo = firstEventDay.getEventInfo()
-        let eventYear = eventInfo.year
-        let eventMonth = eventInfo.month
-        let eventDay = eventInfo.day
-        if eventYear == currentYear {
-            if eventMonth == currentMonth {
-                if eventDay == daysModel.day {
-                    eventView.isHidden = false
-                    eventView.backgroundColor = eventColor
+    func configureEvent(eventName: String, eventColor: UIColor, firstEventDay: Date, repeating: String) {
+        
+        if firstEventDay.isSame(getDate(model: daysModel)) {
+            eventView.isHidden = false
+            eventView.backgroundColor = eventColor
+        }
+        
+        if repeating == "everyday" {
+            var startDate = firstEventDay
+            let endDate = firstEventDay.getDateAfter(year: 0, month: 1)
+            while startDate <= endDate {
+                if startDate.isSame(getDate(model: daysModel)) {
+                    self.eventView.isHidden = false
+                    self.eventView.backgroundColor = eventColor
                 }
+                startDate = Calendar.current.date(byAdding: .day, value: 1, to: startDate)!
             }
+        }
+        if repeating == "twodays" {
+            var startDate = firstEventDay
+                       let endDate = firstEventDay.getDateAfter(year: 0, month: 1)
+                       while startDate <= endDate {
+                           if startDate.isSame(getDate(model: daysModel)) {
+                               self.eventView.isHidden = false
+                               self.eventView.backgroundColor = eventColor
+                           }
+                           startDate = Calendar.current.date(byAdding: .day, value: 2, to: startDate)!
+                       }
+        }
+        if repeating == "everyweek" {
+            var startDate = firstEventDay
+                       let endDate = firstEventDay.getDateAfter(year: 0, month: 2)
+                       while startDate <= endDate {
+                           if startDate.isSame(getDate(model: daysModel)) {
+                               self.eventView.isHidden = false
+                               self.eventView.backgroundColor = eventColor
+                           }
+                           startDate = Calendar.current.date(byAdding: .day, value: 7, to: startDate)!
+                       }
+        } else
+            if repeating == "everyMonth" {
+                var startDate = firstEventDay
+                           let endDate = firstEventDay.getDateAfter(year: 0, month: 2)
+                           while startDate <= endDate {
+                               if startDate.isSame(getDate(model: daysModel)) {
+                                   self.eventView.isHidden = false
+                                   self.eventView.backgroundColor = eventColor
+                               }
+                            startDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
+                           }
         }
     }
 }

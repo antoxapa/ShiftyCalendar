@@ -31,6 +31,7 @@ class MonthCell: UICollectionViewCell {
     var eventName: String?
     var eventColor: UIColor?
     var firstEventDay: Date?
+    var repeating: String?
     
     override class func awakeFromNib() {
         super.awakeFromNib()
@@ -47,10 +48,11 @@ class MonthCell: UICollectionViewCell {
         }
     }
     
-    func configureEvent(eventName: String, eventColor: UIColor, firstEventDay: Date) {
+    func configureEvent(eventName: String, eventColor: UIColor, firstEventDay: Date, repeating: String) {
         self.eventColor = eventColor
         self.eventName = eventName
         self.firstEventDay = firstEventDay
+        self.repeating = repeating
         DispatchQueue.main.async {
             self.daysCollectionView.reloadData()
         }
@@ -76,10 +78,13 @@ extension MonthCell: UICollectionViewDataSource, UICollectionViewDelegate, UICol
         cell.currentMonth = currentMonth
         cell.currentYear = currentYear
         cell.configureDayCell(model: monthModel.days[indexPath.row - skipCount])
+
+            
         
-        if firstEventDay != nil {
-        cell.configureEvent(eventName: eventName!, eventColor: eventColor!, firstEventDay: firstEventDay!)
+            if self.firstEventDay != nil {
+                cell.configureEvent(eventName: self.eventName!, eventColor: self.eventColor!, firstEventDay: self.firstEventDay!, repeating : self.repeating!)
         }
+        
         
         for i in indexPath {
             if i == 5 {
