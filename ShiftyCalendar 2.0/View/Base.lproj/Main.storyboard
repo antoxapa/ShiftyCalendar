@@ -405,56 +405,56 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="colorButtonPressed:" destination="vs1-35-o44" eventType="touchUpInside" id="que-Ha-Mfs"/>
+                                                    <action selector="boxTouched:" destination="vs1-35-o44" eventType="touchUpInside" id="wU6-dk-bEC"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0OY-2N-Wdd">
                                                 <rect key="frame" x="52" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="colorButtonPressed:" destination="vs1-35-o44" eventType="touchUpInside" id="wME-je-30E"/>
+                                                    <action selector="boxTouched:" destination="vs1-35-o44" eventType="touchUpInside" id="nR3-im-nzu"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jge-ia-9nR">
                                                 <rect key="frame" x="104" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="colorButtonPressed:" destination="vs1-35-o44" eventType="touchUpInside" id="XsJ-bO-Czo"/>
+                                                    <action selector="boxTouched:" destination="vs1-35-o44" eventType="touchUpInside" id="Mp5-cY-hVt"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kCR-fz-pcn">
                                                 <rect key="frame" x="156" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="colorButtonPressed:" destination="vs1-35-o44" eventType="touchUpInside" id="qfa-Sc-W3H"/>
+                                                    <action selector="boxTouched:" destination="vs1-35-o44" eventType="touchUpInside" id="tgH-eV-6OF"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIe-bN-ASG">
                                                 <rect key="frame" x="208" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="colorButtonPressed:" destination="vs1-35-o44" eventType="touchUpInside" id="H9I-25-dba"/>
+                                                    <action selector="boxTouched:" destination="vs1-35-o44" eventType="touchUpInside" id="VFf-uG-teS"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eet-lz-Jha">
                                                 <rect key="frame" x="260" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="colorButtonPressed:" destination="vs1-35-o44" eventType="touchUpInside" id="xuS-Bc-xCs"/>
+                                                    <action selector="boxTouched:" destination="vs1-35-o44" eventType="touchUpInside" id="kMN-Uk-A58"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPY-To-BnO">
                                                 <rect key="frame" x="312" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="colorButtonPressed:" destination="vs1-35-o44" eventType="touchUpInside" id="p4h-zh-RVR"/>
+                                                    <action selector="boxTouched:" destination="vs1-35-o44" eventType="touchUpInside" id="MOx-E0-gPA"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XmL-B9-vR8">
                                                 <rect key="frame" x="364" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <action selector="colorButtonPressed:" destination="vs1-35-o44" eventType="touchUpInside" id="QfE-jA-QN7"/>
+                                                    <action selector="boxTouched:" destination="vs1-35-o44" eventType="touchUpInside" id="6YG-uf-FPU"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -573,17 +573,19 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="blueColor" destination="kCR-fz-pcn" id="LWy-kv-huu"/>
                         <outlet property="colorStackView" destination="AoO-5F-T4K" id="dTC-kq-nSj"/>
-                        <outlet property="grayColor" destination="XmL-B9-vR8" id="yHO-zA-Up1"/>
-                        <outlet property="greenColor" destination="0OY-2N-Wdd" id="OVJ-cZ-xrv"/>
+                        <outlet property="doneButton" destination="qXG-wd-3RY" id="4rM-L1-HtG"/>
                         <outlet property="nameTF" destination="5sq-1c-xz0" id="Cyv-1a-5AJ"/>
-                        <outlet property="orangeColor" destination="eet-lz-Jha" id="vBJ-z7-TFP"/>
-                        <outlet property="purpleColor" destination="GIe-bN-ASG" id="Qic-tm-Vww"/>
-                        <outlet property="redColor" destination="Opu-yO-Lea" id="8Sn-yY-eCz"/>
                         <outlet property="repeatButton" destination="aC7-Eo-iVd" id="il4-Jn-Lbi"/>
-                        <outlet property="tealColor" destination="OPY-To-BnO" id="5u0-8E-HnE"/>
-                        <outlet property="yellowColor" destination="Jge-ia-9nR" id="zgG-yW-NCK"/>
+                        <outlet property="repeatNameLabel" destination="eqM-PR-1kU" id="ecu-5A-ocs"/>
+                        <outletCollection property="boxes" destination="Opu-yO-Lea" collectionClass="NSMutableArray" id="8qE-eh-EhI"/>
+                        <outletCollection property="boxes" destination="0OY-2N-Wdd" collectionClass="NSMutableArray" id="Xhb-es-5GK"/>
+                        <outletCollection property="boxes" destination="Jge-ia-9nR" collectionClass="NSMutableArray" id="pgA-bd-f6E"/>
+                        <outletCollection property="boxes" destination="kCR-fz-pcn" collectionClass="NSMutableArray" id="tG8-uH-flV"/>
+                        <outletCollection property="boxes" destination="GIe-bN-ASG" collectionClass="NSMutableArray" id="w8w-sS-xKg"/>
+                        <outletCollection property="boxes" destination="eet-lz-Jha" collectionClass="NSMutableArray" id="k2q-eF-Yjg"/>
+                        <outletCollection property="boxes" destination="OPY-To-BnO" collectionClass="NSMutableArray" id="4Nd-pM-BSa"/>
+                        <outletCollection property="boxes" destination="XmL-B9-vR8" collectionClass="NSMutableArray" id="iKg-9e-wzb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eoy-eR-YWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

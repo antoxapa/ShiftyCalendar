@@ -51,7 +51,7 @@ class MainViewController: UIViewController {
             if  segue.identifier == "done" {
                 let eventDay = svc.startDate
                 let eventName = svc.setName
-                let eventColor = svc.setColor!.toHexString()
+                let eventColor = svc.setColor?.toHexString()
                 let repeating = svc.repeating
                 print("data uploaded")
                 

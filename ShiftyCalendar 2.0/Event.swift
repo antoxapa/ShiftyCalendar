@@ -13,63 +13,55 @@ class Event: UIViewController {
     @IBOutlet weak var nameTF: UITextField! {
         didSet {
             nameTF.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+            
+            
         }
     }
     @IBOutlet weak var colorStackView: UIStackView!
-    @IBOutlet weak var redColor: UIButton! {
+    @IBOutlet weak var doneButton: UIBarButtonItem! {
         didSet {
-            redColor.layer.cornerRadius = redColor.bounds.width / 2
+            doneButton.isEnabled = false
         }
     }
-    @IBOutlet weak var greenColor: UIButton! {
+    
+    @IBOutlet var boxes : [UIButton]! {
         didSet {
-            greenColor.layer.cornerRadius = greenColor.bounds.width / 2
-        }
-    }
-    @IBOutlet weak var yellowColor: UIButton! {
-        didSet {
-            yellowColor.layer.cornerRadius = yellowColor.bounds.width / 2
-        }
-    }
-    @IBOutlet weak var blueColor: UIButton! {
-        didSet {
-            blueColor.layer.cornerRadius = blueColor.bounds.width / 2
-        }
-    }
-    @IBOutlet weak var purpleColor: UIButton! {
-        didSet {
-            purpleColor.layer.cornerRadius = purpleColor.bounds.width / 2
-        }
-    }
-    @IBOutlet weak var orangeColor: UIButton! {
-        didSet {
-            orangeColor.layer.cornerRadius = orangeColor.bounds.width / 2
-        }
-    }
-    @IBOutlet weak var tealColor: UIButton! {
-        didSet {
-            tealColor.layer.cornerRadius = tealColor.bounds.width / 2
-        }
-    }
-    @IBOutlet weak var grayColor: UIButton! {
-        didSet {
-            grayColor.layer.cornerRadius = grayColor.bounds.width / 2
+            boxes.forEach {
+                $0.layer.cornerRadius = $0.bounds.width / 2
+            }
+            boxes[0].isHighlighted = true
+            boxes[0].setShadow(for: .highlighted)
         }
     }
     
     @IBOutlet weak var repeatButton: UIButton!
+    @IBOutlet weak var repeatNameLabel: UILabel!
     
-    
-    
-    
-    var startDate: Date?
-    var setColor: UIColor?
+    var startDate: Date? = Today.todayDate
+    var setColor: UIColor? = .red
     var setName: String?
-    var repeating: String?
+    var repeating: String? = "never"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTF.becomeFirstResponder()
+        if startDate == nil, setName == nil, setColor == nil, repeating == nil {
+            doneButton.isEnabled = false
+        }
+    }
+    
+    @IBAction func boxTouched(_ sender: UIButton) {
+        for item in boxes {
+            item.isHighlighted = false
+            item.removeShadow(for: .normal)
+            
+            if item.tag == sender.tag {
+                item.isHighlighted = true
+                item.setShadow(for: .highlighted)
+                setColor = item.backgroundColor
+                
+            }
+        }
     }
     
    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -79,13 +71,9 @@ class Event: UIViewController {
     @IBAction func setStartDate(_ sender: UIDatePicker) {
         startDate = sender.date
     }
-    
-    @IBAction func colorButtonPressed(_ sender: UIButton) {
-        self.setColor = sender.backgroundColor
-    }
-   
     @objc private func textFieldDidChange() {
         setName = nameTF.text
+        doneButton.isEnabled = true
     }
     
     // MARK: - Navigation
@@ -95,28 +83,39 @@ class Event: UIViewController {
         switch segue.identifier {
         case "everyday":
             repeating = "everyday"
-            print("everyday")
+            repeatNameLabel.text = "Everyday"
         case "twodays":
             repeating = "twodays"
-             print("twodays")
+            repeatNameLabel.text = "Two days"
         case "everyweek":
             repeating = "everyweek"
-            print("everyweek")
+            repeatNameLabel.text = "Every week"
         case "everyMonth":
             repeating = "everyMonth"
-            print("everyMonth")
+            repeatNameLabel.text = "Every month"
         case "never" :
             repeating = "never"
-            print("never")
+            repeatNameLabel.text = "Never"
         default:
             print("default")
         }
-    
-    
-    
-    
-    
-    
+    }
 }
 
+
+extension UIButton {
+    func setShadow(for state: UIControl.State) {
+        layer.borderWidth = 2
+        let borderColor = UIColor.white
+        layer.borderColor = borderColor.cgColor
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 2
+    }
+    
+    func removeShadow(for state: UIControl.State) {
+        layer.borderWidth = 0
+        layer.shadowOffset = CGSize(width: 0, height: 0)
+        layer.shadowRadius = 0
+    }
 }
