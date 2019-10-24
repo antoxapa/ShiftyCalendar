@@ -169,7 +169,7 @@
                                                                 <outlet property="dayCellSubView" destination="TJk-24-yeV" id="6bW-FW-vZg"/>
                                                                 <outlet property="dayLabel" destination="c02-7e-hel" id="Tbf-fE-2Dj"/>
                                                                 <outlet property="eventView" destination="iwu-xB-gEQ" id="Csl-FV-C1X"/>
-                                                                <segue destination="6Hx-B6-VoO" kind="show" id="p0s-u3-NU2"/>
+                                                                <segue destination="6Hx-B6-VoO" kind="show" identifier="showDays" id="pqE-wM-er7"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -286,7 +286,7 @@
                     <navigationItem key="navigationItem" id="zrV-Jg-X0J">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ksV-gd-8Tv">
                             <connections>
-                                <segue destination="ejq-i7-HYV" kind="presentation" id="0Aj-Tr-TMe"/>
+                                <segue destination="ejq-i7-HYV" kind="presentation" identifier="presentAddNewEventMenu" id="0Aj-Tr-TMe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -353,6 +353,47 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4sF-PY-Jcl">
                                 <rect key="frame" x="0.0" y="117" width="414" height="745"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="eventCell" id="5ka-3j-jQ4" customClass="DaysEventsTVC" customModule="ShiftyCalendar_2_0" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5ka-3j-jQ4" id="f7r-Pk-I6y">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtR-JW-96Z">
+                                                    <rect key="frame" x="20" y="9" width="25" height="25"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="UYM-h5-6eM"/>
+                                                        <constraint firstAttribute="width" constant="25" id="fzB-0j-emN"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yD6-23-jOc">
+                                                    <rect key="frame" x="65" y="11.5" width="311" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yD6-23-jOc" firstAttribute="leading" secondItem="xtR-JW-96Z" secondAttribute="trailing" constant="20" id="UD7-A7-RNm"/>
+                                                <constraint firstItem="yD6-23-jOc" firstAttribute="centerY" secondItem="f7r-Pk-I6y" secondAttribute="centerY" id="dlr-rz-DjW"/>
+                                                <constraint firstAttribute="trailing" secondItem="yD6-23-jOc" secondAttribute="trailing" constant="38" id="gyy-zw-Xz9"/>
+                                                <constraint firstItem="xtR-JW-96Z" firstAttribute="top" secondItem="f7r-Pk-I6y" secondAttribute="top" constant="9" id="v6G-0I-bcy"/>
+                                                <constraint firstItem="xtR-JW-96Z" firstAttribute="leading" secondItem="f7r-Pk-I6y" secondAttribute="leading" constant="20" id="yMd-f9-6ge"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="eventColorView" destination="xtR-JW-96Z" id="wdS-Kn-dBT"/>
+                                            <outlet property="eventNameLabel" destination="yD6-23-jOc" id="mic-kV-c30"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6Hx-B6-VoO" id="eCE-Yh-zZ4"/>
+                                    <outlet property="delegate" destination="6Hx-B6-VoO" id="UHS-Hs-cLu"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -370,11 +411,13 @@
                     <navigationItem key="navigationItem" id="amn-1W-y9P"/>
                     <connections>
                         <outlet property="dayInfoView" destination="eYQ-9B-Ak9" id="s4D-GH-Dai"/>
+                        <outlet property="dayLabel" destination="wJJ-kv-pDD" id="hpI-FD-eiJ"/>
+                        <outlet property="daysEventsTV" destination="4sF-PY-Jcl" id="hnl-L2-p7e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qcc-lP-ocF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2419" y="527"/>
+            <point key="canvasLocation" x="2418.840579710145" y="526.33928571428567"/>
         </scene>
         <!--Event-->
         <scene sceneID="67F-dm-od3">
@@ -508,6 +551,7 @@
                                     <constraint firstAttribute="trailing" secondItem="aC7-Eo-iVd" secondAttribute="trailing" constant="8" id="2bR-jD-xui"/>
                                     <constraint firstItem="eqM-PR-1kU" firstAttribute="top" secondItem="aWu-O8-zbX" secondAttribute="top" constant="8" id="2yV-tz-gbE"/>
                                     <constraint firstItem="aC7-Eo-iVd" firstAttribute="centerY" secondItem="eqM-PR-1kU" secondAttribute="centerY" id="6SS-Ul-wwh"/>
+                                    <constraint firstItem="eqM-PR-1kU" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ffF-Ww-9t3" secondAttribute="trailing" constant="282.5" id="ECR-oa-iZs"/>
                                     <constraint firstItem="aC7-Eo-iVd" firstAttribute="top" secondItem="aWu-O8-zbX" secondAttribute="top" id="Kc9-QP-zqh"/>
                                     <constraint firstItem="aC7-Eo-iVd" firstAttribute="leading" secondItem="aWu-O8-zbX" secondAttribute="leading" id="PVk-k8-dmu"/>
                                     <constraint firstItem="aC7-Eo-iVd" firstAttribute="centerY" secondItem="ffF-Ww-9t3" secondAttribute="centerY" id="W0Z-hf-LHC"/>
@@ -845,18 +889,25 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3K-NW-8Qu">
                                                     <rect key="frame" x="20" y="14" width="20" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="h7X-ur-scc"/>
+                                                        <constraint firstAttribute="width" constant="20" id="oXQ-0q-Nch"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                     <state key="normal" image="circle" catalog="system"/>
                                                 </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXy-OA-UHU">
-                                                    <rect key="frame" x="48" y="14" width="40" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Work" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXy-OA-UHU">
+                                                    <rect key="frame" x="48" y="15" width="313" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sR3-Np-ten">
-                                                    <rect key="frame" x="374" y="14" width="20" height="22"/>
+                                                    <rect key="frame" x="369" y="14" width="25" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="22" id="lvo-ju-C09"/>
+                                                        <constraint firstAttribute="width" constant="25" id="tE3-Du-Aai"/>
+                                                    </constraints>
                                                     <state key="normal" image="info.circle" catalog="system"/>
                                                     <connections>
                                                         <action selector="eventInfoButtonPressed:" destination="QES-69-sIj" eventType="touchUpInside" id="IMj-LG-mwJ"/>
@@ -865,11 +916,15 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="E3K-NW-8Qu" firstAttribute="top" secondItem="xTg-Ol-Iag" secondAttribute="top" constant="14" id="8M1-0K-XmF"/>
+                                                <constraint firstItem="PXy-OA-UHU" firstAttribute="top" secondItem="xTg-Ol-Iag" secondAttribute="top" constant="15" id="9eN-4R-ANL"/>
                                                 <constraint firstItem="sR3-Np-ten" firstAttribute="centerY" secondItem="xTg-Ol-Iag" secondAttribute="centerY" id="Mfu-h5-BWy"/>
                                                 <constraint firstItem="E3K-NW-8Qu" firstAttribute="centerY" secondItem="xTg-Ol-Iag" secondAttribute="centerY" id="RgF-RU-A6G"/>
                                                 <constraint firstItem="E3K-NW-8Qu" firstAttribute="leading" secondItem="xTg-Ol-Iag" secondAttribute="leading" constant="20" id="TvH-xH-3cL"/>
+                                                <constraint firstItem="PXy-OA-UHU" firstAttribute="leading" secondItem="E3K-NW-8Qu" secondAttribute="trailing" constant="8" id="Xdm-S1-0Yi"/>
                                                 <constraint firstAttribute="trailing" secondItem="sR3-Np-ten" secondAttribute="trailing" constant="20" id="ab8-2e-x3P"/>
                                                 <constraint firstItem="sR3-Np-ten" firstAttribute="top" secondItem="xTg-Ol-Iag" secondAttribute="top" constant="14" id="c8w-p3-jdm"/>
+                                                <constraint firstItem="PXy-OA-UHU" firstAttribute="centerY" secondItem="xTg-Ol-Iag" secondAttribute="centerY" id="d0p-Av-9eb"/>
+                                                <constraint firstItem="sR3-Np-ten" firstAttribute="leading" secondItem="PXy-OA-UHU" secondAttribute="trailing" constant="8" id="zkH-KT-7FE"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -886,7 +941,11 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qtR-zY-0dx">
                                 <rect key="frame" x="0.0" y="759" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem title="Add" id="hEM-zy-Oy3"/>
+                                    <barButtonItem title="Add" id="hEM-zy-Oy3">
+                                        <connections>
+                                            <segue destination="vs1-35-o44" kind="show" id="3wy-2M-V6Y"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="3yh-wN-vcQ"/>
                                     <barButtonItem title="Show all" id="8us-pQ-GuJ"/>
                                 </items>
@@ -998,4 +1057,7 @@
         <image name="greaterthan" catalog="system" width="64" height="54"/>
         <image name="info.circle" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="1QW-SR-dge"/>
+    </inferredMetricsTieBreakers>
 </document>

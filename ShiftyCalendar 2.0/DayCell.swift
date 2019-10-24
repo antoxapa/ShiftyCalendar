@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class DayCell: UICollectionViewCell {
+class DayCell: UICollectionViewCell{
     
     @IBOutlet weak var dayLabel: UILabel!
     
@@ -31,12 +31,6 @@ class DayCell: UICollectionViewCell {
     var currentMonth: Int!
     var daysModel: CalendarDay!
     
-    //    var eventName: String?
-    //    var eventColor: UIColor?
-    //    var firstEventDay: Date?
-    //
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -44,7 +38,6 @@ class DayCell: UICollectionViewCell {
     override func prepareForReuse() {
         eventView.isHidden = true
         eventView.backgroundColor = .clear
-        
     }
     
     func setUpToday(model: CalendarDay) {
@@ -76,7 +69,21 @@ class DayCell: UICollectionViewCell {
             eventView.backgroundColor = eventColor
         }
         
-        if repeating == "everyday" {
+        switch repeating {
+        case "everyday":
+            DispatchQueue.main.async {
+                var startDate = firstEventDay
+                let endDate = firstEventDay.getDateAfter(year: 0, month: 1)
+                while startDate <= endDate {
+                    if startDate.isSame(self.getDate(model: self.daysModel)) {
+                        self.eventView.isHidden = false
+                        self.eventView.backgroundColor = eventColor
+                    }
+                    startDate = Calendar.current.date(byAdding: .day, value: 1, to: startDate)!
+                }
+            }
+            
+        case "twodays":
             var startDate = firstEventDay
             let endDate = firstEventDay.getDateAfter(year: 0, month: 1)
             while startDate <= endDate {
@@ -84,44 +91,35 @@ class DayCell: UICollectionViewCell {
                     self.eventView.isHidden = false
                     self.eventView.backgroundColor = eventColor
                 }
-                startDate = Calendar.current.date(byAdding: .day, value: 1, to: startDate)!
+                startDate = Calendar.current.date(byAdding: .day, value: 2, to: startDate)!
             }
-        }
-        if repeating == "twodays" {
+        case "everyweek":
             var startDate = firstEventDay
-                       let endDate = firstEventDay.getDateAfter(year: 0, month: 1)
-                       while startDate <= endDate {
-                           if startDate.isSame(getDate(model: daysModel)) {
-                               self.eventView.isHidden = false
-                               self.eventView.backgroundColor = eventColor
-                           }
-                           startDate = Calendar.current.date(byAdding: .day, value: 2, to: startDate)!
-                       }
-        }
-        if repeating == "everyweek" {
+            let endDate = firstEventDay.getDateAfter(year: 0, month: 2)
+            while startDate <= endDate {
+                if startDate.isSame(getDate(model: daysModel)) {
+                    self.eventView.isHidden = false
+                    self.eventView.backgroundColor = eventColor
+                }
+                startDate = Calendar.current.date(byAdding: .day, value: 7, to: startDate)!
+            }
+        case "everyMonth":
             var startDate = firstEventDay
-                       let endDate = firstEventDay.getDateAfter(year: 0, month: 2)
-                       while startDate <= endDate {
-                           if startDate.isSame(getDate(model: daysModel)) {
-                               self.eventView.isHidden = false
-                               self.eventView.backgroundColor = eventColor
-                           }
-                           startDate = Calendar.current.date(byAdding: .day, value: 7, to: startDate)!
-                       }
-        } else
-            if repeating == "everyMonth" {
-                var startDate = firstEventDay
-                           let endDate = firstEventDay.getDateAfter(year: 0, month: 2)
-                           while startDate <= endDate {
-                               if startDate.isSame(getDate(model: daysModel)) {
-                                   self.eventView.isHidden = false
-                                   self.eventView.backgroundColor = eventColor
-                               }
-                            startDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
-                           }
+            let endDate = firstEventDay.getDateAfter(year: 0, month: 2)
+            while startDate <= endDate {
+                if startDate.isSame(getDate(model: daysModel)) {
+                    self.eventView.isHidden = false
+                    self.eventView.backgroundColor = eventColor
+                }
+                startDate = Calendar.current.date(byAdding: .month, value: 1, to: startDate)!
+            }
+            
+        default:
+            print("default")
         }
     }
 }
+
 
 extension DayCell {
     fileprivate func getDate(model: CalendarDay) -> Date? {

@@ -26,6 +26,7 @@
 		0691333D2353386C0075C12B /* EventsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0691333C2353386C0075C12B /* EventsListCell.swift */; };
 		06913343235374820075C12B /* RepeatTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06913342235374820075C12B /* RepeatTVC.swift */; };
 		06B3BE8D23461F800058CD90 /* MonthNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B3BE8C23461F800058CD90 /* MonthNameCell.swift */; };
+		06CC81AB2362261D009EA768 /* DaysEventsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CC81AA2362261D009EA768 /* DaysEventsTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		0691333C2353386C0075C12B /* EventsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListCell.swift; sourceTree = "<group>"; };
 		06913342235374820075C12B /* RepeatTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepeatTVC.swift; sourceTree = "<group>"; };
 		06B3BE8C23461F800058CD90 /* MonthNameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthNameCell.swift; sourceTree = "<group>"; };
+		06CC81AA2362261D009EA768 /* DaysEventsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysEventsTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				0691333A235336AC0075C12B /* EventsListVC.swift */,
 				0691333C2353386C0075C12B /* EventsListCell.swift */,
 				060E91BE2349ED09003E9F72 /* DaysEventsViewController.swift */,
+				06CC81AA2362261D009EA768 /* DaysEventsTVC.swift */,
 				0670074223464E8E00452EAF /* Event.swift */,
 				064AFCCC232BE67F00D3C3BE /* MonthCell.swift */,
 				064AFCD0232BE92400D3C3BE /* DayCell.swift */,
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				060EBC062348C5F900FFD642 /* PlistRealization.swift in Sources */,
+				06CC81AB2362261D009EA768 /* DaysEventsTVC.swift in Sources */,
 				064AFCCF232BE6C300D3C3BE /* MainViewController.swift in Sources */,
 				060E91BF2349ED09003E9F72 /* DaysEventsViewController.swift in Sources */,
 				064AFCDD232C556800D3C3BE /* MonthNameHeader.swift in Sources */,

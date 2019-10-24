@@ -79,8 +79,6 @@ extension MonthCell: UICollectionViewDataSource, UICollectionViewDelegate, UICol
         cell.currentYear = currentYear
         cell.configureDayCell(model: monthModel.days[indexPath.row - skipCount])
 
-            
-        
             if self.firstEventDay != nil {
                 cell.configureEvent(eventName: self.eventName!, eventColor: self.eventColor!, firstEventDay: self.firstEventDay!, repeating : self.repeating!)
         }

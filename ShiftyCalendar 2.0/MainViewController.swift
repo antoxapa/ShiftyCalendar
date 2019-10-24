@@ -57,7 +57,7 @@ class MainViewController: UIViewController {
                 
                 DispatchQueue.main.async {
                     do {
-                        let eventInfo: [String : Any] = ["eventDay": eventDay!, "eventName": eventName!, "eventColor": eventColor, "repeating": repeating!]
+                        let eventInfo: [String : Any] = ["eventDay": eventDay!, "eventName": eventName!, "eventColor": eventColor!, "repeating": repeating!]
                         try savePropertyList(eventInfo)
                         print(eventInfo.values)
                     } catch {
@@ -69,6 +69,7 @@ class MainViewController: UIViewController {
             }
         }
     }
+   
     
     private func createDataBase() {
         var startDate = Today.todayDate
@@ -98,6 +99,7 @@ class MainViewController: UIViewController {
             print("no data")
         }
     }
+
     
 }
 
